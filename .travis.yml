@@ -1,9 +1,5 @@
-sudo: required
-services:
-  - docker
-
-before_install:
-  - docker-compose up
-
+language: php
+install:
+  - composer install
 script:
-  - docker exec -it phpapp php artisan test
+  - php artisan test
