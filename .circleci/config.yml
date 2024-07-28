@@ -15,6 +15,9 @@ jobs:
           name: composer install
           command: composer install
       - run:
+          name: env
+          command: cp .env.example .env
+      - run:
           name: key:generate
           command: php artisan key:generate
       - run:
