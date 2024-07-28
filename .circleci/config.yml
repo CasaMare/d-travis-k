@@ -8,8 +8,9 @@ jobs:
     # Install php packages and run tests
     docker:
       - image: rockinthehouse/pipeline:latest
-    working_directory: ~/travis
+    #working_directory: ~/travis
     steps:
+      - checkout
       - run:
           name: composer install
           command: composer install
