@@ -15,6 +15,9 @@ jobs:
           name: composer install
           command: composer install
       - run:
+          name: key:generate
+          command: php artisan key:generate
+      - run:
           name: php artisan
           command: php artisan test
   deploy:
